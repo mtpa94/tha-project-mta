@@ -43,9 +43,6 @@ h1 {
   cursor: default;
   position: absolute;
   top: 0;
-  /* left: 0;
-  right: 0;
-  bottom: 0; */
   height: 100px;
   margin: auto;
   display: block;
@@ -138,7 +135,7 @@ h1 span:nth-child(14) {
 	transform: perspective(2500px);
   transition: 1s;
   top:40%;
-  left: 30%;
+  left: 40%;
 }
 .birthdayCard:hover {
 	transform: perspective(2500px) rotate(-5deg);
@@ -172,12 +169,10 @@ h1 span:nth-child(14) {
   font-family: Tahoma, sans-serif;
   text-align: center;
   margin:30px; 
-  /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
   transition: .1s;
   font-family: 'Pacifico', cursive;
   font-size: 25px;
   color:crimson;
-  /* font-weight: 600; */
 }
 
 .balloons {
@@ -196,7 +191,7 @@ h1 span:nth-child(14) {
 .gif-container img{
   width: 350px;
   height: 350px;
-  transform: translate(1000px, 80px);
+  transform: translate(1300px, 80px);
 }
 .cardInside {
   position: absolute;
@@ -230,23 +225,49 @@ p {
   text-align: center;
   margin:30px;
   font-weight: bold; 
-  /* outline-color:#333;
-  outline-style: dotted; */
 }
 
-.btn{
+
+.team-page{
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  heightrgb(41, 41, 65)px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+.team-page a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+}
+.team-page a:before,
+.team-page a:after{
   position: absolute;
-  top:800px;
-  left: 1700px;
-  border-style: double;
-  color:blue;
-  background-color:#ccccff;
-  box-shadow: black;
-  font-weight: bold;
+  content: "Go To Team Page";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #ff0066;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
-
-.btn a{
-  text-decoration: none;
+.team-page a:before{
+  color: #fff;
+  background: #ff0066;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.team-page a:after{
+  color: #ff0066;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.team-page a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
 }
 
 @media(max-width: 1650px){
@@ -258,7 +279,7 @@ p {
   .gif-container img{
     width: 200px;
     height: 200px;
-    transform: translate(800px, 5px);
+    transform: translate(900px, 5px);
   }
 
   .birthdayCard {
@@ -287,12 +308,5 @@ p {
   .name{
     visibility: hidden;
   }
-
-  .btn{
-    position: absolute;
-    top:550px;
-    left: 1200px;
-  }
-  
+ 
 }
-
